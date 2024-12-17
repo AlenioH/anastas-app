@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body
-        className={`${montserrat.variable} antialiased grid grid-rows-[20px_1fr_20px] p-8 pb-20 gap-16 min-h-screen`}
+        className={`${montserrat.variable} antialiased grid grid-rows-[20px_1fr_20px] p-8 pb-20 gap-12 min-h-screen`}
       >
         <header>header</header>
         {children}

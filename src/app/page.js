@@ -1,24 +1,38 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
-    <div className="  p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-montserrat)]">
-      <h1>Анастасия Давыдос</h1>
-      <main className="container flex flex-col gap-8 row-start-2 items-center sm:items-start p-4">
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-montserrat)]">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-
+    <div className="sm:p-20 font-[family-name:var(--font-montserrat)]">
+      <div className="mb-4">
+        <h1>Анастасия Давыдова</h1>
+        <h2>@davydoffsta</h2>
+      </div>
+      <main className="container flex flex-col gap-4 items-center sm:items-start">
+        <div className="flex flex-col gap-2 font-medium tracking-tight m-4 text-center">
+          <p>
+            <strong>
+              Преподаватель немецкого. Психолог. Трижды эмигрантка.
+            </strong>
+          </p>
+          <p>Спикер. Создатель воркшопов.</p>
+          <p>Я про любовь к себе в новой стране.</p>
+        </div>
+        <Link
+          href="/about"
+          className="flex gap-2 underline underline-offset-4 text-lg"
+        >
+          Сделай первый шаг! <ArrowLongRightIcon className="h-6 w-6" />
+        </Link>
+        <Image
+          src="/photo1.png"
+          width={300}
+          height={300}
+          alt=""
+          layout="responsive"
+        />
       </main>
-
     </div>
   );
 }
