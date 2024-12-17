@@ -1,27 +1,16 @@
-import { Geist, Geist_Mono, Philosopher } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 
-const philosopher = Philosopher({
-  variable: '--font-philosopher',
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
 });
-
-// const geistMono = Geist_Mono({
-//   variable: '--font-geist-mono',
-//   subsets: ['latin'],
-// });
-
-export const metadata = {
-  title: 'Анастасия Давыдос',
-  description: 'Психология и немецкий',
-};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body
-        className={`${philosopher.variable} antialiased grid grid-rows-[20px_1fr_20px] p-8 pb-20 gap-16 min-h-screen`}
+        className={`${montserrat.variable} antialiased grid grid-rows-[20px_1fr_20px] p-8 pb-20 gap-16 min-h-screen`}
       >
         <header>header</header>
         {children}
